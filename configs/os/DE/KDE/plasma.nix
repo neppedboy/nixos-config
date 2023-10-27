@@ -26,11 +26,7 @@
   #     sddm.enable = true
   #     sddm.theme = "${import ./sddm.nix { inherit pkgs; }}"
   #   }
-
-
-
-  }
-
+#  }
 
 
 }
