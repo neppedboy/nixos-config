@@ -1,9 +1,19 @@
 { config, pkgs, ... }: {
 
   # Enable the KDE Plasma Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
   programs.dconf.enable = true;
+
+
+  ## SDDM
+    services.xserver = {
+    enable = true;
+    displayManager = {
+      sddm.enable = true;
+      # sddm.theme = "${import ./sddm/sddm.nix { inherit pkgs; }}";
+    };
+ };
+
 
   # qt5 = { 
   #    enable = true; 
@@ -19,14 +29,6 @@
     libsForQt5.qt5.qtquickcontrols2   
     libsForQt5.qt5.qtgraphicaleffects
   ];
-
-  # services.xserver = {
-  #   enable = true 
-  #   displayManager - {
-  #     sddm.enable = true
-  #     sddm.theme = "${import ./sddm.nix { inherit pkgs; }}"
-  #   }
-#  }
 
 
 }
