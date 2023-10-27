@@ -20,12 +20,12 @@
     libsforqt5.qt5.qtgraphicaleffects
   ];
 
-  services.xserver = {
-    enable = true 
-    displayManager = {
-      sddm.enable = true
-      sddm.theme = "${import ./sddm.nix { inherit pkgs; }}"
-    }
+  # services.xserver = {
+  #   enable = true 
+  #   displayManager - {
+  #     sddm.enable = true
+  #     sddm.theme = "${import ./sddm.nix { inherit pkgs; }}"
+  #   }
 
 
 
