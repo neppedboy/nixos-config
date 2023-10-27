@@ -17,6 +17,7 @@
       ./configs/apps/coding.nix
 
       ./configs/os/hardware/sound.nix
+      ./configs/os/hardware/radeon-gpu.nix
 
       ./configs/os/lifehacks.nix
       ./configs/os/packages.nix
