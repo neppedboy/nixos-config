@@ -21,7 +21,6 @@
         [
           ./configuration.nix
           ./configs/flakes/spicetify.nix
-          # ./configs/os/DE/KDE/sddm.nix
         ];
       };
     };

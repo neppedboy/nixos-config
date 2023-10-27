@@ -13,7 +13,7 @@
       displayManager.sddm = {
         enable = true;
         wayland.enable = true;
-        theme = "${import ./sddm.nix {inherit pkgs lib;}}";
+        theme = "${import ../../../../beauty/sddm/sddm.nix {inherit pkgs lib;}}";
         settings = {
           General = {InputMethod = "";};
         };

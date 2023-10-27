@@ -1,4 +1,4 @@
-# Based on https://github.com/isabelroses/dotfiles/blob/refactor/flake/pkgs/sddm.nix
+# Based on https://github.com/isabelroses/dotfiles/blob/main/flake/pkgs/sddm.nix
 {
   pkgs,
   lib,
