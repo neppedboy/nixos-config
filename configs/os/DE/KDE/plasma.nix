@@ -16,7 +16,20 @@
     libsForQt5.sddm
     libsForQt5.qtstyleplugin-kvantum
     libsForQt5.qtstyleplugins 
+    libsforqt5.qt5.qtquickcontrols2   
+    libsforqt5.qt5.qtgraphicaleffects
   ];
+
+  services.xserver = {
+    enable = true 
+    displayManager = {
+      sddm.enable = true
+      sddm.theme = "${import ./sddm.nix { inherit pkgs; }}"
+    }
+
+
+
+  }
 
 
 

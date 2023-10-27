@@ -26,7 +26,8 @@
       # ./configs/os/appimage.nix
 
       ./configs/os/xorg.nix
-      ./configs/os/plasma.nix
+      
+      ./configs/os/DE/KDE/plasma.nix
 
       ./configs/shell/terminal.nix
 
