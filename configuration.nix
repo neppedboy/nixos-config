@@ -6,30 +6,35 @@
 
 {
   imports =
-    [ 
-      
+    [
+      ## Based 
       ./hardware-configuration.nix
       ./configs/os/mounts.nix
 
-      ./configs/apps/usual.nix
-      ./configs/apps/other.nix
-      ./configs/apps/gaming.nix
-      ./configs/apps/coding.nix
+      ## GUI 
+      ./configs/os/xorg.nix
+      ./configs/os/DE/KDE/plasma.nix
+      ./beauty/etc/fonts.nix
 
+      ## HARDWARE
       ./configs/os/hardware/sound.nix
       ./configs/os/hardware/radeon-gpu.nix
-
+      
+      ## Some needed things
       ./configs/os/lifehacks.nix
       ./configs/os/packages.nix
       ./configs/os/system.nix
       ./configs/os/users.nix
-      # ./configs/os/appimage.nix
-
-      ./configs/os/xorg.nix
+      ./configs/os/appimage.nix
       
-      ./configs/os/DE/KDE/plasma.nix
-
+      ## Tips and tricks
+      ./configs/apps/usual.nix
+      ./configs/apps/other.nix
+      ./configs/apps/gaming.nix
+      ./configs/apps/coding.nix
       ./configs/shell/terminal.nix
+
+      
 
     ];
 
