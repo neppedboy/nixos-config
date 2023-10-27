@@ -25,6 +25,9 @@
       ./configs/os/packages.nix
       ./configs/os/system.nix
       ./configs/os/users.nix
+
+      ## Fixes
+      ./beauty/flatpak/fonts-fix.nix
       ./configs/os/appimage.nix
       
       ## Tips and tricks

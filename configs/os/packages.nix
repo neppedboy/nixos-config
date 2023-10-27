@@ -1,6 +1,8 @@
 { pkgs, ... }: {
   environment.systemPackages = with pkgs; [
-    ntfs3g
     fuse
+    ntfs3g
+    bindfs
+    appimage-run
   ];
 }
