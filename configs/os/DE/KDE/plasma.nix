@@ -1,4 +1,6 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, lib, ... }:
+
+{
 
   # Enable the KDE Plasma Desktop Environment.
   services.xserver.desktopManager.plasma5.enable = true;
@@ -6,20 +8,18 @@
 
 
   ## SDDM
-    services.xserver = {
-    enable = true;
-    displayManager = {
-      sddm.enable = true;
-      # sddm.theme = "${import ./sddm/sddm.nix { inherit pkgs; }}";
+  services.xserver = {
+      enable = true;
+      displayManager.sddm = {
+        enable = true;
+        wayland.enable = true;
+        theme = "${import ./sddm.nix {inherit pkgs lib;}}";
+        settings = {
+          General = {InputMethod = "";};
+        };
+      };
     };
- };
 
-
-  # qt5 = { 
-  #    enable = true; 
-  #   style = lib.mkForce "gtk2"; 
-  #   platformTheme = lib.mkForce "gtk2"; 
-  # };
    
   environment.systemPackages = with pkgs; [
     libsForQt5.spectacle
